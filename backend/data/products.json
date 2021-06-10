@@ -28,5 +28,20 @@
         "stock" : 0,
         "numberOfReviews" : 2,
         "reviews": []
+    },
+    {
+        "name" : "TESTING USB FD Adapter (GC-CAN-USB-FD)",
+        "price" : "315.00",
+        "description" : "Monitor a CAN network, write a CAN program and communicate with industrial, medical , automotive or other CAN device.",
+        "ratings" : 1.65,
+        "images" : [{
+            "public_id" : "a",
+            "url" : "ab"
+        }],
+        "category" : "Electronics",
+        "seller" : "Shopee",
+        "stock" : 0,
+        "numberOfReviews" : 2,
+        "reviews": []
     }
 ]
