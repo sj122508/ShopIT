@@ -23,7 +23,7 @@ exports.getProducts = async (req, res, next) => {
     })
 }
 
-// Get single product details => /api/v1/product/:id
+// Get single product details => /api/v1/admin/product/:id
 exports.getSingleProduct = async (req, res, next) => {
     
     try {
@@ -38,8 +38,29 @@ exports.getSingleProduct = async (req, res, next) => {
             message: 'Product not found - ' + error.message
 
         })
-    }
-   
+    }    
+}
 
+// Update Product => /api/v1/admin/product/:id
+exports.updateProduct = async(req, res, next) => {
     
+    try {
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true,
+            useFindAndModify: false
+        });
+
+        res.status(200).json({
+            success: true,
+            product
+        })
+
+    } catch (error) {
+         res.status(404).json({
+            success: false,
+            message: 'Product not found - ' + error.message
+
+        })
+    }
 }
